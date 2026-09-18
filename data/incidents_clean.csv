@@ -1,0 +1,12 @@
+incident_id,date,location,incident_type,response_time_minutes,units_dispatched,response_time_review
+1001,2026-01-03,Perth,Fire,8.2,3,False
+1002,2026-01-04,Fremantle,Rescue,11.5,2,False
+1003,2026-01-04,Joondalup,Fire,7.4,4,False
+1004,2026-01-05,Perth,Hazmat,14.2,5,False
+1005,2026-01-06,Rockingham,Rescue,10.1,2,False
+1006,2026-01-07,Perth,Fire,9.3,3,False
+1007,2026-01-08,Fremantle,Fire,,4,False
+1008,2026-01-09,Joondalup,Rescue,,2,False
+1009,2026-01-10,Perth,Hazmat,13.8,5,False
+1010,2026-01-11,Rockingham,Fire,8.9,3,False
+1011,2026-01-12,Fremantle,Rescue,250.0,2,True
