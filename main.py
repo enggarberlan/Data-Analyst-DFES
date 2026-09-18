@@ -1,8 +1,13 @@
+# ==========================================
+# 1. IMPORT LIBRARIES
+# ==========================================
 import pandas as pd
 import sqlite3
 import matplotlib.pyplot as plt
 
-# Load raw incident data
+# ==========================================
+# 2. LOAD AND PROFILE RAW DATA
+# ==========================================
 df = pd.read_csv("data/incidents.csv")
 
 print("=== DATASET OVERVIEW ===")
@@ -17,6 +22,9 @@ print(df.isnull().sum())
 print("\n=== DUPLICATE ROWS ===")
 print(df.duplicated().sum())
 
+# ==========================================
+# 3. DATA CLEANING AND QUALITY CHECKS
+# ==========================================
 # Create a copy for cleaning
 clean_df = df.copy()
 
@@ -73,6 +81,9 @@ clean_df.to_csv(
 
 print("\nClean dataset saved to data/incidents_clean.csv")
 
+# ==========================================
+# 4. PREPARE RELATIONAL DATA
+# ==========================================
 print("\n=== CREATING LOCATIONS DATA ===")
 
 locations_df = (
@@ -104,6 +115,9 @@ print(
     ]
 )
 
+# ==========================================
+# 5. CREATE AND POPULATE SQLITE DATABASE
+# ==========================================
 print("\n=== CREATING DATABASE ===")
 
 conn = sqlite3.connect("database/incidents.db")
@@ -163,6 +177,9 @@ conn.commit()
 
 print("\nData inserted into database successfully.")
 
+# ==========================================
+# 6. VERIFY DATABASE
+# ==========================================
 print("\n=== DATABASE VERIFICATION ===")
 
 query = """
@@ -184,6 +201,10 @@ result = pd.read_sql_query(query, conn)
 
 print(result)
 
+
+# ==========================================
+# 7. SQL DATA ANALYSIS
+# ==========================================
 print("\n=== SQL DATA ANALYSIS ===")
 
 # 1. Number of incidents by type
