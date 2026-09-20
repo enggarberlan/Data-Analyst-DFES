@@ -109,9 +109,14 @@ automatically deleted from the database.
 
 The project produces three visualisations:
 
-- Number of incidents by type
-- Average response time by incident type
-- Total units dispatched by location
+### Number of incidents by type
+![Number of Incidents by Type](D:\Enggar\Career\Data Analyst DFES\output\incidents_by_type.png)
+
+### Average response time by incident type
+![Number of Incidents by Type](D:\Enggar\Career\Data Analyst DFES\output\average_response_time.png)
+
+### Total units dispatched by location
+![Number of Incidents by Type](D:\Enggar\Career\Data Analyst DFES\output\units_dispatched_by_location.png)
 
 The charts are saved in the `output` directory.
 
